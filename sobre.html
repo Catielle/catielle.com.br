@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre — Catielle Andressa</title>
+  <template id="__bundler_thumbnail" data-bg-color="#FFFFFF">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <text x="50" y="58" font-family="Georgia, serif" font-style="italic" font-size="15" fill="#1A1A1A" text-anchor="middle">Sobre</text>
+    </svg>
+  </template>
+  <style>
+    @font-face {
+      font-family: 'The Seasons';
+      src: url('uploads/The Seasons Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'The Seasons';
+      src: url('uploads/The Seasons Italic.ttf') format('truetype');
+      font-weight: 400; font-style: italic;
+    }
+    @font-face {
+      font-family: 'The Seasons';
+      src: url('uploads/The Seasons Bold.ttf') format('truetype');
+      font-weight: 700; font-style: normal;
+    }
+    @font-face {
+      font-family: 'The Seasons';
+      src: url('uploads/The Seasons Light.ttf') format('truetype');
+      font-weight: 300; font-style: normal;
+    }
+    @font-face {
+      font-family: 'The Seasons';
+      src: url('uploads/The Seasons Light Italic.ttf') format('truetype');
+      font-weight: 300; font-style: italic;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('uploads/Poppins-Light.ttf') format('truetype');
+      font-weight: 300; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('uploads/Poppins-LightItalic.ttf') format('truetype');
+      font-weight: 300; font-style: italic;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('uploads/Poppins-ExtraLight.ttf') format('truetype');
+      font-weight: 200; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('uploads/Poppins-Bold.ttf') format('truetype');
+      font-weight: 700; font-style: normal;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #FFFFFF;
+      --text: #1A1A1A;
+      --accent: #6B1E1E;
+      --font-title: 'The Seasons', Georgia, serif;
+      --font-body: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 28px 48px;
+      background: var(--bg);
+    }
+
+    .nav-logo {
+      font-family: var(--font-title);
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent); }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--text);
+      transition: all 0.3s;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 140px 48px 80px;
+    }
+
+    /* ── VIDEO ── */
+    .video-container {
+      width: 100%;
+      margin-bottom: 72px;
+      position: relative;
+    }
+
+    .video-container iframe,
+    .video-container video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      border: none;
+    }
+
+    /* ── BIO TEXT ── */
+    .bio-text {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text);
+      text-align: justify;
+      text-wrap: pretty;
+    }
+
+    .bio-text p {
+      margin-bottom: 1.6em;
+    }
+
+    .bio-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── EMAIL ── */
+    .contact-line {
+      margin-top: 72px;
+      padding-top: 56px;
+      border-top: 1px solid #d8d8d5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .contact-label {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .contact-line a {
+      font-family: var(--font-title);
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .contact-line a:hover { opacity: 0.65; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 48px 24px 32px;
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: #aaa;
+    }
+
+    footer a { color: #aaa; text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--accent); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      nav {
+        padding: 22px 24px;
+        justify-content: space-between;
+        gap: 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: var(--bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        z-index: 200;
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1rem; letter-spacing: 0.14em; }
+
+      .nav-toggle {
+        display: flex;
+        z-index: 300;
+      }
+
+      .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+      .nav-toggle.open span:nth-child(2) { opacity: 0; }
+      .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+      .page-wrapper {
+        padding: 110px 24px 60px;
+      }
+
+      .bio-text { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Catielle Andressa</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="sobre.html" class="active">Sobre</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <div class="video-container">
+      <video controls playsinline preload="metadata">
+        <source src="uploads/bio.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="bio-text">
+      <p>Sou ghostwriter há mais de uma década e roteirista formada pela AIC – Academia Internacional de Cinema, em São Paulo, e pela SCNI – Scuola Nazionale di Cinema Indipendente, em Florença. Tenho formação em pedagogia e especialização em Escrita e Narrativas. Meu trabalho se desenvolve <strong>na escrita, em interseção com técnicas mistas como fotografia e colagem.</strong></p>
+
+      <p>Deixei o Brasil para me tornar mãe na República Tcheca. Hoje escrevo sob o sol da Toscana.</p>
+
+      <p><strong>Gosto muito:</strong> do café da manhã italiano (cappuccino e brioche, al pistacchio, per favore). De ler biografias e memórias. Do cinema de Éric Rohmer. Dos filmes de Audrey Hepburn. De Sting, The Police e Joni Mitchell. De ouvir música em mídia física. De fotografias com estética antiga. De tentar tocar violão. De ter um quarto todo meu.</p>
+
+      <p><strong>Não gosto nem um pouco:</strong> de como me sinto ao ler notícias ruins. De ter melasma. De viver longe da minha irmã. De não saber tocar violão ainda. De não ter tempo para ler todos os bons livros nem para ver todos os bons filmes. De saber que a vida não é um morango (queria tanto que fosse).</p>
+
+      <p>Tenho dois cachorros, Nico e Marvin, e uma filha que se chama Tereza.</p>
+
+      <p>Acho que isso é tudo o que você precisa saber sobre mim. Por enquanto.</p>
+    </div>
+
+    <div class="contact-line">
+      <span class="contact-label">me escreva no</span>
+      <a href="mailto:catielle@catielle.com.br">catielle@catielle.com.br</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <span>&#174; 2026 Catielle Andressa</span>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
