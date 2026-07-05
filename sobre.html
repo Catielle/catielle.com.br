@@ -235,17 +235,21 @@
       .nav-links {
         display: none;
         position: fixed;
-        inset: 0;
+        top: 68px;
+        right: 24px;
+        min-width: 140px;
         background: var(--bg);
+        border: 1px solid #e5e5e2;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
+        align-items: flex-end;
+        gap: 16px;
+        padding: 18px 22px;
         z-index: 200;
       }
 
       .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1rem; letter-spacing: 0.14em; }
+      .nav-links a { font-size: 0.85rem; letter-spacing: 0.12em; }
 
       .nav-toggle {
         display: flex;
